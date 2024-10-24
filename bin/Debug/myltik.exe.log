@@ -1,0 +1,296 @@
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdre0, Thread: 0x1AF8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Users\2023\Documents\лиза фролова\myltik\main.cpp:20:
+
+     18: 
+     19: 
+=>   20:     txTextCursor (false);
+     21:     return 0;
+     22:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2024 10:16:29, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2024 10:17:19
+
+Run file:	C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe
+Directory:	C:\Users\2023\Documents\лиза фролова\myltik
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005072FC (32-bit), Flags: CMdre0, Thread: 0x1250 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Users\2023\Documents\лиза фролова\myltik\main.cpp:20:
+
+     18: 
+     19: 
+=>   20:     txTextCursor (false);
+     21:     return 0;
+     22:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 17 2024 10:21:00, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 17 2024 10:21:19
+
+Run file:	C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe
+Directory:	C:\Users\2023\Documents\лиза фролова\myltik
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdre0, Thread: 0x21B8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Users\2023\Documents\лиза фролова\myltik\main.cpp:24:
+
+     22: 
+     23: 
+=>   24:     txTextCursor (false);
+     25:     return 0;
+     26:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 19 2024 10:01:25, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 19 2024 10:01:41
+
+Run file:	C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe
+Directory:	C:\Users\2023\Documents\лиза фролова\myltik
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 14346, функция: intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND),
+
+Сообщение: Возможно, окно рисования не создано или не в порядке.
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x005062FC (32-bit), Flags: CMdre0, Thread: 0x1D04 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in intptr_t {anonymous}::TX::txPlayVideo(int, int, int, int, const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14346:
+
+  14344:                       double zoom /*= 0*/, double gain /*= 1*/, HWND wnd /*= txWindow()*/)
+  14345:     {
+=>14346: $1  if (wnd && wnd == txWindow() && _TX_TXWINDOW_FAILED()) return -1;
+  14347: 
+  14348: $   int time = GetTickCount();  //-V2551
+
+# 1 in intptr_t {anonymous}::TX::txPlayVideo(const char*, double, double, HWND) at c:\codeblocks\codeblocks\mingw\include\txlib.h:14498:
+
+  14496: intptr_t txPlayVideo (const char fileName[], double zoom /*= 0*/, double gain /*= 0*/, HWND wnd /*= txWindow()*/)
+  14497:     {
+=>14498: $1  return txPlayVideo (0, 0, 0, 0, fileName, zoom, gain, wnd);
+  14499:     }
+  14500: 
+
+# 2 in void {anonymous}::TX::_txCleanup() at c:\codeblocks\codeblocks\mingw\include\txlib.h:9116:
+
+   9114: 
+   9115: $   txSpeak     (NULL);
+=> 9116: $   txPlayVideo (NULL);
+   9117: 
+   9118: $   delete _txCanvas_UserDCs;
+
+# 3 in void {anonymous}::TX::_txOnCExit() at c:\codeblocks\codeblocks\mingw\include\txlib.h:8925:
+
+   8923:     OutputDebugString ("\n");
+   8924: 
+=> 8925: $5  _txCleanup();
+   8926: 
+   8927:     _TX_CALLv (Win32::_cexit, ());
+
+# 4 in int main() at C:\Users\2023\Documents\лиза фролова\myltik\main.cpp:36:
+
+     34: 
+     35: 
+=>   36:     txTextCursor (false);
+     37:     return 0;
+     38:     }
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 19 2024 10:19:50, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 19 2024 10:20:07
+
+Run file:	C:\Users\2023\Documents\лиза фролова\myltik\bin\Debug\myltik.exe
+Directory:	C:\Users\2023\Documents\лиза фролова\myltik
+
+--------------------------------------------------
